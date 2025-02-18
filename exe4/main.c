@@ -71,20 +71,20 @@ int main() {
 
       if (btn_status_green == 1){ // Primeiro clique
         btn_status_green = 0;
-        gpio_put(LED_PIN_GREEN,1);
         printf("fall 1 \n");}
   
       if (btn_status_green == 2){ // Primeira subida
         btn_status_green = 3;
+        gpio_put(LED_PIN_GREEN,1);
         printf("rise 2 \n");}
   
       if (btn_status_green == 4){ // Segundo clique
         btn_status_green = 3;
-        gpio_put(LED_PIN_GREEN,0);
         printf("fall 3 \n");}
   
       if (btn_status_green == 5){ // Segunda subida
         btn_status_green = 0;
+        gpio_put(LED_PIN_GREEN,0);
         printf("rise 4 \n");}
   }
 }
